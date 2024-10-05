@@ -1,0 +1,9 @@
+docker build -t asf-bot .
+
+
+docker run -d --name asf-bot \
+  -e NAPCAT_WS_URL="ws://1.1.1.1:3001" \
+  -e TARGET_USER_ID="12312312" \
+  -e ASF_API_URL="http://1.1.1.1:1242/Api" \
+  -e ASF_API_KEY="123123123" \
+  asf-bot
